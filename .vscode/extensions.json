@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "James-Yu.latex-workshop",
+    "ms-vscode.makefile-tools",
+    "charliermarsh.ruff"
+  ]
+}

@@ -1,0 +1,1 @@
+Place original inputs here only when licences, consent, and project rules permit. Keep source files immutable and document source URLs, access dates, licence, checksums, and restrictions. This directory is ignored by Git except for this README.

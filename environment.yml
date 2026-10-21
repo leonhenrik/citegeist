@@ -1,0 +1,14 @@
+# Optional Conda alternative. The primary environment is managed by uv/pyproject.toml.
+name: research-paper
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - ipykernel
+      - jupyterlab
+      - matplotlib
+      - numpy
+      - pandas
+      - pytest
