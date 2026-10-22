@@ -7,6 +7,9 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "[latex]": {
+    "editor.wordWrap": "on"
+  },
   "latex-workshop.latex.bibDirs": ["C:/Users/PCUser/Documents/3_University/3_Cambridge/0_Code/citegeist"],
   "latex-workshop.intellisense.citation.backend": "biblatex",
   "latex-workshop.latex.outDir": "%DIR%/../build",
