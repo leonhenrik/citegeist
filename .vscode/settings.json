@@ -7,6 +7,21 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "latex-workshop.latex.bibDirs": ["C:/Users/PCUser/Documents/3_University/3_Cambridge/0_Code/citegeist"],
+  "latex-workshop.intellisense.citation.backend": "biblatex",
   "latex-workshop.latex.outDir": "%DIR%/../build",
-  "latex-workshop.latex.recipe.default": "lastUsed"
+  "latex-workshop.latex.tools": [
+    {
+      "name": "make",
+      "command": "make",
+      "args": ["-C", "..", "paper"]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "make paper",
+      "tools": ["make"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "make paper"
 }
