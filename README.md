@@ -3,7 +3,7 @@
 Local-first research workflow: Python, Jupyter, native LaTeX, BibLaTeX/Biber, Zotero + Better BibTeX, Git, and Make.
 
 ## Prerequisites
-Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a TeX distribution providing `latexmk`, `pdflatex`, and `biber`. On Windows, WSL is the most straightforward Make-based setup.
+Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a TeX distribution providing `pdflatex` and `biber`. On Windows, WSL is the most straightforward Make-based setup.
 
 ## First run
 1. Open this folder in VS Code.

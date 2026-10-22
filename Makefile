@@ -6,8 +6,11 @@ setup:
 	@echo "Setup complete. Select .venv as the Python interpreter, then run 'make paper'."
 
 paper: results
-	mkdir -p build
-	latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build paper/main.tex
+	uv run python -c "from pathlib import Path; Path('build').mkdir(exist_ok=True)"
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=build paper/main.tex
+	biber build/main
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=build paper/main.tex
+	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=build paper/main.tex
 	@echo "Built build/paper.pdf"
 
 results:
