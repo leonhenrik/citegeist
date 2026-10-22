@@ -11,7 +11,7 @@ paper: results
 	biber build/main
 	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=build paper/main.tex
 	pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -output-directory=build paper/main.tex
-	@echo "Built build/paper.pdf"
+	@echo "Built build/main.pdf"
 
 results:
 	uv run python scripts/build_results.py

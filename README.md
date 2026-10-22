@@ -10,7 +10,7 @@ Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a
 2. Run `make setup` (installs dependencies and registers the notebook kernel). Without Make, run `uv sync` and then `uv run python -m ipykernel install --user --name research-paper --display-name "Research Paper (.venv)"`.
 3. Select `.venv` as the Python interpreter and the named kernel for notebooks.
 4. Run `make paper`.
-5. Open `build/paper.pdf`.
+5. Open `build/main.pdf`.
 
 ## Project map
 - `data/raw/`: original inputs; ignored by Git except for its README.
@@ -19,7 +19,8 @@ Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a
 - `src/research/`: reusable analysis functions.
 - `scripts/build_results.py`: reproducible manuscript-artifact generation.
 - `outputs/figures/`, `outputs/tables/`: generated files referenced by LaTeX.
-- `paper/main.tex`: native LaTeX manuscript.
+- `paper/main.tex`: native LaTeX manuscript; title, author, and affiliation are set at the top.
+- `paper/preamble.tex`: packages and bibliography setup, kept out of `main.tex`.
 - `refs/references.bib`: Better BibLaTeX export destination.
 - `build/`: PDF and LaTeX auxiliary files, ignored by Git.
 
@@ -36,7 +37,7 @@ The included `.bib` has a demo entry so the template compiles before Zotero setu
 
 ## Commands
 - `make setup`: install dependencies with `uv sync` and register the notebook kernel. Run once after cloning.
-- `make paper`: regenerate figures/tables and compile `build/paper.pdf`.
+- `make paper`: regenerate figures/tables and compile `build/main.pdf`.
 - `make results`: regenerate figures/tables only.
 - `make check`: basic Python syntax and tests.
 - `make clean`: remove generated files.
