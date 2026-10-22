@@ -7,11 +7,10 @@ Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a
 
 ## First run
 1. Open this folder in VS Code.
-2. Run `uv sync`.
-3. Run `uv run python -m ipykernel install --user --name research-paper --display-name "Research Paper (.venv)"`.
-4. Select `.venv` as the Python interpreter and the named kernel for notebooks.
-5. Run `make paper`.
-6. Open `build/paper.pdf`.
+2. Run `make setup` (installs dependencies and registers the notebook kernel). Without Make, run `uv sync` and then `uv run python -m ipykernel install --user --name research-paper --display-name "Research Paper (.venv)"`.
+3. Select `.venv` as the Python interpreter and the named kernel for notebooks.
+4. Run `make paper`.
+5. Open `build/paper.pdf`.
 
 ## Project map
 - `data/raw/`: original inputs; ignored by Git except for its README.
@@ -36,6 +35,7 @@ Install Git, Python 3.12, `uv`, GNU Make, VS Code, Zotero + Better BibTeX, and a
 The included `.bib` has a demo entry so the template compiles before Zotero setup. Replace it with the auto-export. Do not manually edit a file managed by Better BibTeX because Zotero may overwrite it. Commit the exported bibliography if you need historical builds to remain reproducible.
 
 ## Commands
+- `make setup`: install dependencies with `uv sync` and register the notebook kernel. Run once after cloning.
 - `make paper`: regenerate figures/tables and compile `build/paper.pdf`.
 - `make results`: regenerate figures/tables only.
 - `make check`: basic Python syntax and tests.

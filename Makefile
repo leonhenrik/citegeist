@@ -1,4 +1,9 @@
-.PHONY: paper results clean check
+.PHONY: setup paper results clean check
+
+setup:
+	uv sync
+	uv run python -m ipykernel install --user --name research-paper --display-name "Research Paper (.venv)"
+	@echo "Setup complete. Select .venv as the Python interpreter, then run 'make paper'."
 
 paper: results
 	mkdir -p build
