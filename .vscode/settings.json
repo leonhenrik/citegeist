@@ -11,6 +11,8 @@
     "editor.wordWrap": "on"
   },
   "latex-workshop.latex.bibDirs": ["C:/Users/PCUser/Documents/3_University/3_Cambridge/0_Code/citegeist"],
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.intellisense.citation.backend": "biblatex",
   "latex-workshop.latex.outDir": "%DIR%/../build",
   "latex-workshop.latex.tools": [
